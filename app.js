@@ -92,21 +92,23 @@ function buildTeam(){
             choices: ["Manager", "Engineer", "Intern", "No"]
         }
         ]).then((response) => {
+            //console.log(response.builder)
             //if Manager is selected, run the addManager function
-            if (response.choices === "Manager") {
+            if (response.builder === "Manager") {
+                console.log("this works")
                 addManager();
             }
             //if Engineer is selected, run the addEngineer function
-            else if (response.choices === "Engineer") {
+            else if (response.builder === "Engineer") {
                 addEngineer();
             }
             //if Intern is selected, run the addIntern function
-            else if (response.choices === "Intern") {
+            else if (response.builder === "Intern") {
                 addIntern();
             }
             //if No is selected, assuming the team is complete, render the HTML page
-            else if (response.choices === "No") {
-                render();
+            else if (response.builder === "No") {
+                console.log(teamMembers);
             }
         })
     }
