@@ -95,7 +95,7 @@ function buildTeam(){
             //console.log(response.builder)
             //if Manager is selected, run the addManager function
             if (response.builder === "Manager") {
-                console.log("this works")
+                //console.log("this works")
                 addManager();
             }
             //if Engineer is selected, run the addEngineer function
@@ -108,7 +108,8 @@ function buildTeam(){
             }
             //if No is selected, assuming the team is complete, render the HTML page
             else if (response.builder === "No") {
-                render(teamMembers);
+                //console.log(teamMembers);
+                buildHTML();
             }
         })
     }
@@ -136,6 +137,16 @@ function buildTeam(){
             teamMembers.push(intern);
             questionUser();
         })
+    }
+    //This function is returning an error in the console. 
+    function buildHTML () {
+        fs.writeFile(outputPath, render(teamMembers), {}, (err) => {
+            if (err) {
+                console.log("Error");
+                return;
+            } 
+            console.log("You have successfully built your team!")
+        });
     }
     questionUser();
 }
