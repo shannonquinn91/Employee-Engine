@@ -17,7 +17,7 @@ function buildTeam(){
     const managerQs = [
         {
             type: "input",
-            name: "mame",
+            name: "name",
             message: "What is the managers name?"
         },
         {
@@ -39,7 +39,7 @@ function buildTeam(){
     const engineerQs = [
         {
             type: "input",
-            name: "mame",
+            name: "name",
             message: "What is the engineers name?"
         },
         {
@@ -61,7 +61,7 @@ function buildTeam(){
     const internQs = [
         {
             type: "input",
-            name: "mame",
+            name: "name",
             message: "What is the interns name?"
         },
         {
@@ -108,7 +108,7 @@ function buildTeam(){
             }
             //if No is selected, assuming the team is complete, render the HTML page
             else if (response.builder === "No") {
-                console.log(teamMembers);
+                render(teamMembers);
             }
         })
     }
