@@ -108,7 +108,7 @@ function buildTeam(){
             }
             //if No is selected, assuming the team is complete, render the HTML page
             else if (response.builder === "No") {
-                console.log("once user selects No", teamMembers);
+                //console.log("once user selects No", teamMembers);
                 buildHTML();
             }
         })
