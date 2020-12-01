@@ -21,7 +21,7 @@ function buildTeam(){
             message: "What is the managers name?"
         },
         {
-            type: "imput",
+            type: "input",
             name: "id",
             message: "What is the managers ID#?"
         },
@@ -108,7 +108,7 @@ function buildTeam(){
             }
             //if No is selected, assuming the team is complete, render the HTML page
             else if (response.builder === "No") {
-                //console.log(teamMembers);
+                console.log("once user selects No", teamMembers);
                 buildHTML();
             }
         })
@@ -138,11 +138,11 @@ function buildTeam(){
             questionUser();
         })
     }
-    //This function is returning an error in the console. 
+    //
     function buildHTML () {
         fs.writeFile(outputPath, render(teamMembers), {}, (err) => {
             if (err) {
-                console.log("Error");
+                console.log(err);
                 return;
             } 
             console.log("You have successfully built your team!")
