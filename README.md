@@ -10,7 +10,7 @@
   Link to GitHub Repo: https://github.com/shannonquinn91/Employee-Engine
   This is a Node CLI application that takes in information about employees and generates an HTML webpage that displays summaries for each employee. The application prompts the user for information about the team members. The user an input any number of team members, and they may be a mix of managers, engineers, and interns. When the user has completed building the team, the application creates an HTML file that displays a formatted team roster based on the information provided by the user. This application uses the inquirer npm package to prompt the user. Jest was also installed to test the application.     
 
-  Here is a walkthrough video of how to run this application:
+  Here is a walkthrough video of how to run this application: https://drive.google.com/file/d/1aXG9b8ite96kN25Ubp-BxsOJBgG41OcB/view 
   
 
   ## Installation
